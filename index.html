@@ -1,0 +1,793 @@
+
+<!-- saved from url=(0075)file:///C:/Users/Anshu/Desktop/FreeTyping/Stenoshala%20Typing%20Module.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     <script>
+    history.pushState({}, '', '/typing-module');
+
+    window.onpopstate = function (event) {
+      history.pushState({}, '', '/typing-module');
+    };
+       
+   
+  </script>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./index_files/html2pdf.bundle.min.js.download"></script>
+<script src="./index_files/html2canvas.min.js.download"></script>
+<script src="./index_files/jspdf.umd.min.js.download"></script>
+
+  <script src="./index_files/html2canvas.min(1).js.download"></script>
+  <script src="./index_files/html2canvas.min(1).js.download"></script>
+  <script src="./index_files/1c2.js.download"></script>
+  <style>
+        /* Your CSS styles here */
+        body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f7fc;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      color: #2874A6;
+      
+    }
+    h3 {
+      color: #2874A6;
+      
+    }
+    label {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    textarea#paragraphB { 
+    margin-top: 15px;
+      height: 300px; 
+      font-size: 18px;
+    }
+    button {
+      background-color: #2874A6;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2874A6;
+    }
+    #textBoxC {
+      margin-top: 20px;
+      border: 2px solid #333;
+      padding: 10px;
+      display: none;
+    }
+    .compared-text span {
+      display: inline-block;
+      padding: 3px;
+      margin: 1px;
+      background-color: #c8e1ff;
+      border-radius: 2px;
+      color: white;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      border: 1px solid black;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+    }
+    #downloadButton {
+      display: none;
+      margin-top: 20px;
+    }
+    #countdownBox {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px;
+      background-color: #c8e1ff;
+      border-radius: 4px;
+    }
+    /* New Styles */
+    #textBoxC h2 {
+      color: #2874A6;
+    }
+    #textBoxC p {
+      color: #2874A6;
+    }
+    #textBoxC {
+        margin-top: 20px;
+        border: 2px solid #333;
+        padding: 10px;
+        display: none;
+        font-size: 18px; /* Set default font size for textBoxC */
+        text-align: justify; /* Add this line to justify the text */
+        line-height: 30px; /* Add this line to create a gap of 10.5px after each line */
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+      border: 2px solid black;
+    }
+    /* Style for the unchecked checkbox */
+    input[type="checkbox"] {
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      margin-right: 10px;
+      margin-top: 10px;
+      vertical-align: middle;
+    }
+    /* Style for the text color of the label */
+    label {
+      color: #2E4053;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 10px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    /* Style for the checked checkbox */
+    input[type="checkbox"]:checked {
+      background-color: #2874A6;
+      border-color: #2E86C1;
+    }
+    /* Popup box styles */
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+    .popup-box {
+      background-color: #fff;
+      border-radius: 4px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      text-align: center;
+    }
+    .popup-button {
+      background-color: #2874A6;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .popup-button:hover {
+      background-color: #1E5AA8;
+    }
+        .compared-text .no-background-color {
+            background-color: none;
+            color: initial;
+        }
+        .compared-text .green-background-color {
+            background-color: green;
+            color: white;
+        }
+        #watermarkImage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.2;
+            pointer-events: none;
+            z-index: -1;
+        }
+        /* Modified styles for the countdown box */
+        #countdownBox {
+            float: right; /* Move the countdown box to the left side */
+            color: #2874A6; /* Make the text blue */
+        }
+/* CSS for dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#textSizeDropdown {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 10px 20px; /* Adjust padding */
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #333;
+    appearance: none;
+    
+}
+
+#textSizeDropdown:focus {
+    outline: none;
+    border-color: #2874A6; /* Change border color on focus */
+}
+
+#textSizeDropdown:hover {
+    background-color: #f2f2f2; /* Change background color on hover */
+}
+
+/* Style for the dropdown arrow */
+#textSizeDropdown::after {
+    content: "\25BC"; /* Unicode character for dropdown arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Style for the dropdown label */
+label {
+    margin-right: 10px; /* Add space between label and dropdown */
+    
+}
+
+/* Increase the text size of the dropdown box */
+#textSizeDropdown {
+    font-size: 18px; /* Change font size to 18px */
+    padding-right: 20px;
+}
+
+/* Add space between label and dropdown */
+.dropdown-label {
+    margin-right: 10px;
+    
+}
+
+/* Add space between the lines */
+.dropdown-label,
+label {
+    
+    font-size: 20px;
+}
+     .dropdown select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23333" width="18px" height="18px"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center; 
+    background-position: left 40px center;/* Adjusted background position */
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px 69px 5px 10px; /* Adjusted padding to increase width by 39px */
+    font-size: 16px;
+    padding-right: 50px; /* Adjusted padding for the arrow */
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6); /* Transparent background with some opacity */
+}
+
+.modal-content {
+  background-color: #f9f9f9;
+  margin: 10% auto;
+  padding: 10px; /* Adjusted padding */
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Shadow effect */
+  max-width: 400px;
+  width: 80%;
+  height: 200px;
+}
+
+/* Modal header styles */
+.modal-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: #3498db; /* Blue text color */
+}
+
+/* Close button styles */
+.close {
+  display: none; /* Hide the close button */
+}
+
+/* Modal body styles */
+.modal-body {
+  padding: 10px;
+  color: #333; /* Text color */
+  text-align: center; /* Center align the text */
+}
+.modal-body p {
+  font-size: 21px; /* Increase text size */
+  margin-bottom: 20px; /* Add space below the paragraph */
+}
+
+/* Modal footer styles */
+.modal-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.modal-footer #confirmYes {
+  background-color: #e74c3c; /* Button background color */
+}
+
+.modal-footer #confirmNo {
+  background-color: #27ae60; /* Green button background color */
+  color: #fff; /* White text color */
+}
+.modal-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.modal-footer button {
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 5px; /* Add space between buttons */
+}
+
+.modal-footer button:hover {
+  opacity: 0.8; /* Reduce opacity on hover */
+}
+#logoAndHeading {
+    display: flex; /* Set display to flex */
+    align-items: center; /* Align items vertically */
+}
+
+#logoContainer {
+    width: 50px; /* Set width of logo container */
+    height: 50px; /* Set height of logo container */
+    margin-right: 10px; /* Adjust margin to create space between logo and heading */
+    margin-bottom: 20px;
+}
+
+#logo {
+    width: 100%; /* Make the logo fill its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+#headingContainer {
+    flex: 1; /* Allow heading container to expand and fill remaining space */
+}
+
+h1 {
+    margin: 0; /* Remove default margin for heading */
+}
+
+
+#textbox4Container {
+            border: 2px solid #2874A6;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        #checkbox4 {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid orange;
+            border-radius: 4px;
+            margin-right: 10px;
+            margin-top: 10px;
+            vertical-align: middle;
+        }
+
+        #checkbox4:checked {
+            background-color: orange;
+        }
+
+        #checkbox4 + label {
+            color: #2E4053;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 15px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+    </style>
+    <title>Stenoshala Typing Module</title>
+    <script>
+        var countdownInterval;
+        var compareButtonClicked = false;
+
+        function startCountdown(duration) {
+            var timer = duration * 60;
+            var countdownDisplay = document.getElementById('countdownTimer');
+            countdownInterval = setInterval(function () {
+                var minutes = Math.floor(timer / 60);
+                var seconds = timer % 60;
+                minutes = minutes < 10 ? '0' + minutes : minutes;
+                seconds = seconds < 10 ? '0' + seconds : seconds;
+                countdownDisplay.textContent = minutes + ':' + seconds;
+                if (--timer < 0) {
+                    clearInterval(countdownInterval);
+                    countdownDisplay.textContent = '00:00';
+                    if (!compareButtonClicked) {
+                        compareButtonClicked = true;
+                        compareParagraphs();
+                    }
+                }
+            }, 1000);
+        }
+
+
+        var numMissedButMatched = 0;
+
+        function checkForMatchingWords(word, paragraph, startIndex) {
+            var wordsToCheck = 1;
+            for (var i = 0; i < wordsToCheck && (startIndex + i) < paragraph.length; i++) {
+                var nextWord = paragraph[startIndex + i];
+                if (word === nextWord) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+    function isSimilar(wordA, wordB) {
+            var minLength = Math.min(wordA.length, wordB.length);
+            var maxLength = Math.max(wordA.length, wordB.length);
+            var similarCount = 0;
+            var threshold = document.getElementById('checkbox1').checked ? 100 : 50;
+
+            for (var i = 0; i < minLength; i++) {
+                if (wordA[i] === wordB[i]) {
+                    similarCount++;
+                }
+            }
+
+            var similarityPercentage = (similarCount / maxLength) * 100;
+            return similarityPercentage >= threshold;
+        }
+
+        function arraysAreEqual(arr1, arr2) {
+            if (arr1.length !== arr2.length) {
+                return false;
+            }
+            for (var i = 0; i < arr1.length; i++) {
+                if (arr1[i] !== arr2[i]) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        
+function showConfirmation() {
+    var modal = document.getElementById("confirmationModal");
+    modal.style.display = "block";
+}
+
+function closeConfirmation() {
+    var modal = document.getElementById("confirmationModal");
+    modal.style.display = "none";
+}
+
+function submitForm() {
+    document.getElementById('compareButton').disabled = true;
+    compareParagraphs();
+    closeConfirmation(); // Close the modal after submission
+}
+
+
+
+function downloadPDF() {
+    // Get the time left in the countdown timer
+    const countdownDisplay = document.getElementById('countdownTimer');
+    const timeParts = countdownDisplay.textContent.split(':');
+    const minutesLeft = parseInt(timeParts[0]);
+    const secondsLeft = parseInt(timeParts[1]);
+
+    // Calculate the time taken by subtracting time left from the total time (50 minutes)
+    const totalMinutes = 50;
+    const totalSeconds = totalMinutes * 60;
+    const remainingSeconds = minutesLeft * 60 + secondsLeft;
+    const timeTakenSeconds = totalSeconds - remainingSeconds;
+
+    // Convert time taken to MM:SS format
+    const minutes = Math.floor(timeTakenSeconds / 60);
+    const seconds = timeTakenSeconds % 60;
+    const timeTaken = `${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+    
+    // Calculate the total number of words typed in paragraphB
+    const paragraphBContent = document.getElementById('paragraphB').value;
+    const totalWords = paragraphBContent.split(/\s+/).length;
+
+    // Calculate the average typing speed (words per minute) considering the seconds as well
+    const totalTimeInMinutes = timeTakenSeconds / 60;
+    const averageTypingSpeed = totalWords / totalTimeInMinutes;
+
+    // Get the PDF file name
+    const pdfFileName = "Customized Dictation"; // Assuming the document title contains the desired PDF file name
+
+    // Get current date and time
+    const currentDate = new Date();
+    const day = currentDate.getDate();
+    const monthIndex = currentDate.getMonth();
+    const year = currentDate.getFullYear();
+    const hours = currentDate.getHours();
+    const currentMinutes = currentDate.getMinutes(); // Renamed to currentMinutes to avoid conflict
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    const formattedHours = hours % 12 || 12; // Convert to 12-hour format
+    const formattedMinutes = currentMinutes < 10 ? '0' + currentMinutes : currentMinutes;
+
+    // Array of month names
+    const monthNames = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    ];
+
+    // Format the date
+    const formattedDate = `${day} ${monthNames[monthIndex]} ${year},`;
+
+    // Format the time
+    const formattedTime = `${formattedHours}:${formattedMinutes} ${ampm}`;
+
+    // Create header content with PDF file name, time taken, and download date
+    const headerContent = `
+        <div style="text-align: center;">
+            Practice and Learn Shorthand on <a href="https://www.stenoshala.com" style="color: blue; text-decoration: none;">www.stenoshala.com</a>
+        </div>
+        <div style="text-align: center; margin-top: 5px;">
+            ${pdfFileName}<br>
+        </div>
+        <div style="text-align: center; margin-top: 5px;">
+            Test Date & Time: ${formattedDate} ${formattedTime} <br>
+            Time Taken to Type: ${timeTaken} Minutes <br>
+            Average Typing Speed: ${averageTypingSpeed.toFixed(2)} WPM
+        </div>
+    `;
+
+    // Create a container for the header text
+    const headerText = document.createElement('div');
+    headerText.innerHTML = headerContent;
+    headerText.style.textAlign = 'left'; // Align the header text to the left
+
+    // Get the textBoxC element
+    const textBoxC = document.getElementById('textBoxC');
+
+    // Insert the header text before any other content in textBoxC
+    textBoxC.insertBefore(headerText, textBoxC.firstChild);
+
+    // Convert the HTML element to a PDF using html2pdf library
+    html2pdf()
+        .from(textBoxC)
+        .set({
+            margin: 10,
+            filename: pdfFileName, // Use the dynamically extracted PDF file name
+            jsPDF: {
+                unit: 'mm',
+                format: 'a4',
+                orientation: 'portrait'
+            }
+        })
+        .save();
+}
+
+
+
+// Function to handle the click event of checkbox3
+        function handleCheckbox3Click() {
+            var checkbox3 = document.getElementById('checkbox3');
+            var paragraphB = document.getElementById('paragraphB');
+
+            if (checkbox3.checked) {
+                paragraphB.addEventListener('keydown', function (event) {
+                    if (event.key === 'Backspace') {
+                        event.preventDefault();
+                    }
+                });
+            } else {
+                paragraphB.removeEventListener('keydown');
+            }
+        }
+    
+        window.onload = function () {
+      // Set initial value and make paragraph A visible
+      document.getElementById('paragraphA').value = "";
+      document.getElementById('paragraphA').style.display = 'block';
+      startCountdown(50);
+    }
+ 
+    </script>
+</head>
+<body data-new-gr-c-s-check-loaded="14.1223.0" data-gr-ext-installed="">
+    <div id="countdownBox">
+    Time Left: <span id="countdownTimer">49:54</span>
+</div>
+ <div id="logoAndHeading">
+        <!-- Logo -->
+        <div id="logoContainer">
+            <img src="./index_files/stenoshala.jpg" alt="Stenoshala Logo" id="logo">
+            
+        </div>
+
+        <!-- Heading -->
+        <div id="headingContainer">
+            <h1>Stenoshala Shorthand Academy - Typing Module</h1>
+            <div style="margin-bottom: 20px;"></div>
+            
+        </div>
+        
+    </div>
+<div>
+  
+  <h1></h1>
+  <textarea id="paragraphA" placeholder="Paste the original matter here" style="width: 100%; height: 300px; font-size: 18px; display: block;"></textarea>
+</div>
+<br><br>
+<div style="display: flex; justify-content: space-between;">
+
+  <!-- First Section -->
+  <div style="border: 1px solid black; border-radius: 8px; width: 35%; padding: 10px; margin-bottom: 20px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);">
+    <h3>Count Mistakes as per Specific Exam Skill Test:</h3>
+    <div>
+      <input type="checkbox" id="checkbox4" name="checkbox4">
+      <label for="checkbox4">Count Mistakes as per SSC Steno Skill Test</label>
+    </div>
+  </div>
+
+  <!-- Second Section -->
+  <div style="border: 1px solid black; border-radius: 8px; width: 55%; padding: 10px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);">
+    <h3>Adjust software as per your need:</h3>
+    <div>
+      <input type="checkbox" id="checkbox2" name="checkbox2">
+      <label for="checkbox2">Count Capitalisation Mistakes as Full Mistakes (Generally used for Court Exams)</label>
+    </div>
+    <div>
+      <input type="checkbox" id="checkbox1" name="checkbox1">
+      <label for="checkbox1">Count Spelling Mistakes as Full Mistakes (Generally used for Court Exams)</label>
+    </div>
+    <div>
+      <h1></h1>
+    </div>
+    <input type="checkbox" id="checkbox3" onclick="handleCheckbox3Click()">
+    <label for="checkbox3">Disable Backspace (Once disabled, can't be enabled)</label><br>
+  </div>
+
+</div>
+
+<!-- Added checkbox3 -->
+        <h1></h1>
+<div class="dropdown" onmouseover="openDropdown()" onmouseleave="closeDropdown()">
+    <label for="textSizeDropdown">Select Text Size:</label>
+    <select id="textSizeDropdown" onchange="changeTextSize(this.value)">
+        <option value="14px">14</option>
+        <option value="16px">16</option>
+        <option value="18px" selected="">18</option>
+        <option value="20px">20</option>
+        <option value="22px">22</option>
+        <option value="24px">24</option>
+        <option value="26px">26</option>
+        <option value="28px">28</option>
+        <option value="30px">30</option>
+        <option value="32px">32</option>
+        <option value="34px">34</option>
+        <option value="36px">36</option>
+        <option value="38px">38</option>
+        <option value="40px">40</option>
+    </select>
+</div>
+<div>
+    <label for="paragraphB"></label><br>
+    <textarea id="paragraphB" placeholder="Type here...best of luck dear stenographer !" spellcheck="false" style="margin-bottom: 10px;"></textarea>
+</div>
+
+
+
+<button id="compareButton" onclick="showConfirmation()">Submit</button>
+<button id="downloadButton" style="margin-top: 20px; display: none; font-size: 20px; background-color: red;" onclick="downloadPDF()">Download Result Sheet</button>
+<!-- Modal -->
+<div id="confirmationModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>⚠️ Confirmation</h2>
+      <span class="close" onclick="closeConfirmation()">×</span>
+    </div>
+    <div class="modal-body">
+      <p>Are you sure you want to submit?</p>
+    </div>
+    <div class="modal-footer">
+      <button id="confirmYes" onclick="submitForm()">Yes</button>
+      <button id="confirmNo" onclick="closeConfirmation()">No</button>
+    </div>
+  </div>
+</div>
+
+<div id="textBoxC" style="position: relative;"></div>
+<input type="hidden" id="combinedContent">
+
+
+
+
+<!-- Popup box -->
+  <div class="popup-overlay" style="display: none;">
+    <div class="popup-box">
+      <p>Following correct spellings are accepted by our software:</p>
+      <p><strong>The correct spelling of Hon. or Honourable is:</strong><br>Hon'ble or hon'ble</p>
+      
+      <button class="popup-button" onclick="closePopup()">Got It!</button>
+    </div>
+  </div>
+
+  <script>
+    function showPopup() {
+      var popupOverlay = document.querySelector('.popup-overlay');
+      popupOverlay.style.display = 'flex';
+    }
+
+    function closePopup() {
+      var popupOverlay = document.querySelector('.popup-overlay');
+      popupOverlay.style.display = 'none';
+    }
+  </script>
+
+<!-- Watermark Image -->
+<img id="watermarkImage" src="./index_files/stenoshala.jpg" style="display: none;">
+<script>
+    // Function to change the text size of paragraphB
+    function changeTextSize(size) {
+        document.getElementById('paragraphB').style.fontSize = size;
+    }
+</script>
+
+
+<grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></body></html>
